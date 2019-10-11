@@ -1,3 +1,5 @@
+package lab0;
+
 public class Variant2 {
     enum Mark{BAD, VERYBAD, GOOD, PERFECT, NORMAL; }
 

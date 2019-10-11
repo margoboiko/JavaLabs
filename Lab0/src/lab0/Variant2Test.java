@@ -1,3 +1,5 @@
+package lab0;
+
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
