@@ -10,11 +10,13 @@ public class Act {
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         if (name.length() > MAXNAMELENGTH)
             throw new RuntimeException("Please rewrite!");
         this.name = name;
     }
+
 
     public String getGenre() {
         return genre;

@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74b9022c-98c5-44ae-afaf-9b1d70f34f12" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab1/ActorsRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab1/ActorsRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab1/testing/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab1/testing/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Labs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab1/Act.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab1/Act.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +60,7 @@
   </component>
   <component name="RunManager" selected="TestNG.Test">
     <configuration name="Test" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Lab0" />
+      <module name="Labs" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="lab1.testing.*" />
@@ -75,7 +77,7 @@
       </method>
     </configuration>
     <configuration name="Variant2Test" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Lab0" />
+      <module name="Labs" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="lab0.Variant2Test" />
       <option name="TEST_OBJECT" value="CLASS" />
@@ -86,7 +88,7 @@
       </method>
     </configuration>
     <configuration name="Variant2Test.arrayTask" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Lab0" />
+      <module name="Labs" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="lab0.Variant2Test" />
       <option name="METHOD_NAME" value="arrayTask" />
@@ -98,7 +100,7 @@
       </method>
     </configuration>
     <configuration name="Variant2Test.forTask" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Lab0" />
+      <module name="Labs" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="lab0.Variant2Test" />
       <option name="METHOD_NAME" value="forTask" />
@@ -110,7 +112,7 @@
       </method>
     </configuration>
     <configuration name="Variant2Test.twoDimensionArrayTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Lab0" />
+      <module name="Labs" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="lab0.Variant2Test" />
       <option name="METHOD_NAME" value="twoDimensionArrayTest" />
@@ -156,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573639899487</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Completed">
+      <created>1573640344664</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573640344664</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
