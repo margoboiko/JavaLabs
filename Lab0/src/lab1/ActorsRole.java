@@ -63,7 +63,9 @@ public class ActorsRole {
         }
 
         public ActorsRole.Builder setRole(String role) {
-
+            if (role.length() > 20)
+                throw new RuntimeException("Please rewrite!");
+            else
             ActorsRole.this.role = role;
             return this;
         }

@@ -59,10 +59,17 @@ public class Test {
                 .build();
     }
 
-    @org.testng.annotations.Test
+    @org.testng.annotations.Test(expectedExceptions = RuntimeException.class)
     public void builderTest8() {
         ActorsRole actorsRole = new ActorsRole().new Builder()
                 .setRole("Головна жіноча роль, Катерина")
+                .build();
+    }
+
+    @org.testng.annotations.Test
+    public void builderTest9() {
+        ActorsRole actorsRole = new ActorsRole().new Builder()
+                .setRole("Дяк, Петро")
                 .build();
     }
 }
