@@ -1,24 +1,28 @@
 package lab1;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Objects;
 
 public class ActorsRole {
-    Actors actor;
-    String role;
+   private Actors actor;
+   private String role;
 
     public Actors getActor() {
         return actor;
     }
-
     public void setActor(Actors actor) {
+        if (actor == null)
+            throw new RuntimeException("Please add actors!");
         this.actor = actor;
     }
 
     public String getRole() {
         return role;
     }
-
     public void setRole(String role) {
+        if (role.length() > 20)
+            throw new RuntimeException("Please rewrite!");
         this.role = role;
     }
 
@@ -42,5 +46,31 @@ public class ActorsRole {
     @Override
     public int hashCode() {
         return Objects.hash(actor, role);
+    }
+
+    public class Builder {
+
+        public Builder() {
+            // private constructor
+        }
+
+        public ActorsRole.Builder setActor(Actors actor) {
+            if (actor == null)
+                ActorsRole.this.actor = null;
+            else
+            ActorsRole.this.actor = actor;
+            return this;
+        }
+
+        public ActorsRole.Builder setRole(String role) {
+
+            ActorsRole.this.role = role;
+            return this;
+        }
+
+        public ActorsRole build() {
+            return ActorsRole.this;
+        }
+
     }
 }
