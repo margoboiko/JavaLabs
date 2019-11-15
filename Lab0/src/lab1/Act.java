@@ -4,13 +4,19 @@ import java.util.Objects;
 
 public class Act {
     public static final Integer MAXNAMELENGTH = 30;
-   private String name;
+    //public Object name;
+    //public Object genre;
+    private String name;
    private String genre;
 
     public String getName() {
         return name;
     }
 
+    /**
+     *
+     * @param name Act name
+     */
     public void setName(String name) {
         if (name.length() > MAXNAMELENGTH)
             throw new RuntimeException("Please rewrite!");
@@ -21,6 +27,10 @@ public class Act {
     public String getGenre() {
         return genre;
     }
+    /**
+     *
+     * @param genre Act genre
+     */
     public void setGenre(String genre) {
         this.genre = genre;
     }
@@ -52,10 +62,19 @@ public class Act {
 
         Act act;
 
+        /**
+         * inner class builder which implements
+         * pattern "Builder"
+         */
         public Builder() {
             act=new Act();
         }
 
+        /**
+         *
+         * @param name String must be less than MAXNAMELENGHT
+         * @return instance of this builder
+         */
         public Builder setName(String name) {
             if (name.length() > MAXNAMELENGTH)
                 throw new RuntimeException("Please rewrite!");
@@ -69,7 +88,12 @@ public class Act {
             return this;
         }
 
-        public Act build() {
+        /**
+         * Call it after setting all parameters
+         * @return instance of class Actors
+         */
+        public Act build()
+        {
             return act;
         }
     }

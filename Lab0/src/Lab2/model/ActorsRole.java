@@ -1,7 +1,7 @@
-package lab1;
+package Lab2.model;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
+import lab1.Actors;
+
 import java.util.Objects;
 
 public class ActorsRole {
@@ -65,6 +65,7 @@ public class ActorsRole {
             ActorsRole.this.actor = actor;
             return this;
         }
+
         /**
          *
          * @param role lenght must be less than 20
@@ -82,7 +83,8 @@ public class ActorsRole {
          * Call it after setting all parameters
          * @return instance of class Actors
          */
-        public ActorsRole build() {
+        public ActorsRole build()
+        {
             return ActorsRole.this;
         }
 

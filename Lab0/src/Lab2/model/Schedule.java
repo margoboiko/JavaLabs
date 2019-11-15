@@ -1,12 +1,22 @@
-package lab1;
+package Lab2.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import Lab2.service.LocalDateDeserializer;
+import Lab2.service.LocalDateSerializer;
+
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Objects;
 
-public class Schedule {
+public class Schedule implements Comparable<Schedule> {
     public static final Double MAXPRICE = 200.00;
    private Act act;
+    @JsonFormat(pattern = "yyyyMMdd")
+    @JsonDeserialize(using = LocalDateDeserializer.class)
+    @JsonSerialize(using = LocalDateSerializer.class)
    private LocalDate date;
    private LocalTime time;
    private Double price;
@@ -76,11 +86,15 @@ public class Schedule {
         return Objects.hash(act, date, time, price);
     }
 
+    @Override
+    public int compareTo(Schedule schedule) {
+        return 0;
+    }
+
     /**
      * inner class builder which implements
      * pattern "Builder"
      */
-
     public class Builder {
 
         public Builder() {

@@ -1,14 +1,23 @@
-package lab1;
+package Lab2.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import Lab2.service.LocalDateDeserializer;
+import Lab2.service.LocalDateSerializer;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Actors {
+public class Actors implements Serializable {
     private LocalDate MAXYEAR =  LocalDate.of(1960, 1, 1);
     public static final Double MINSALARY = 3000d;
     private String firstName;
     private String lastName;
+    @JsonFormat(pattern = "yyyyMMdd")
+    @JsonDeserialize(using = LocalDateDeserializer.class)
+    @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate birthday;
     private Double salary;
 
