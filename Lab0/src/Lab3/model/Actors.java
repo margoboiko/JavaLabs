@@ -1,10 +1,10 @@
-package Lab2.model;
+package Lab3.model;
 
+import Lab2.service.LocalDateDeserializer;
+import Lab2.service.LocalDateSerializer;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import Lab2.service.LocalDateDeserializer;
-import Lab2.service.LocalDateSerializer;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -96,7 +96,7 @@ public class Actors implements Serializable {
             return this;
         }
 
-        public Actors.Builder setLastName(String lastName) {
+        public Actors.Builder setLastName(String lasttName) {
             Actors.this.lastName = lastName;
             return this;
         }

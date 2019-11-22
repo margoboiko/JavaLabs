@@ -17,7 +17,7 @@ public class TextSerializer {
         return new Object[]{actors.getFirstName(), actors.getLastName(), actors.getBirthday(), actors.getSalary()};
     }
 
-    private String serializeToString(Actors actors) throws ConvertException {
+    public String serializeToString(Actors actors) throws ConvertException {
         try {
             Object[] fields = getActorsFields(actors);
             List<String> stringList = Arrays.stream(fields)
@@ -29,7 +29,7 @@ public class TextSerializer {
         }
     }
 
-    private Actors deserializeFromString(String string) throws ConvertException {
+    public Actors deserializeFromString(String string) throws ConvertException {
         try {
             Actors obj= new Actors();
             String[] fields = string.split(FIELDS_SEPARATOR, FIELDS_COUNT);

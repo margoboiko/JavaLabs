@@ -1,15 +1,15 @@
-package Lab2.model;
+package Lab3.model;
 
 import java.util.Objects;
 
 
 public class Act {
 
-        public static final Integer MAX_NAME_LENGTH = 30;
+    public static final Integer MAX_NAME_LENGTH = 30;
     private String name;
-        private String genre;
+    private String genre;
 
-        public String getName() {
+    public String getName() {
             return name;
         }
 
@@ -23,7 +23,7 @@ public class Act {
             this.name = name;
         }
 
-        public String getGenre() {
+     public String getGenre() {
             return genre;
         }
 

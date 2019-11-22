@@ -1,11 +1,11 @@
-package Lab2.model;
+package Lab3.model;
 
+import Lab2.model.Act;
+import Lab2.service.LocalDateDeserializer;
+import Lab2.service.LocalDateSerializer;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import Lab2.service.LocalDateDeserializer;
-import Lab2.service.LocalDateSerializer;
-
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -88,7 +88,7 @@ public class Schedule implements Comparable<Schedule> {
 
     @Override
     public int compareTo(Schedule schedule) {
-        return 0;
+        return Double.compare(this.price, schedule.price);
     }
 
     /**

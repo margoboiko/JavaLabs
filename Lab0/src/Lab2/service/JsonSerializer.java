@@ -2,6 +2,10 @@ package Lab2.service;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+import Lab2.model.Actors;
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -71,4 +75,19 @@ public class JsonSerializer<T> implements IO<T> {
         return mapper.readValue(string, classObject);
     }
 
+    public static void main(String[] args) throws JsonProcessingException {
+        JsonSerializer jsonSerializer= new JsonSerializer(Actors.class);
+        Actors actors;
+
+        ArrayList<Actors> arrayActors = new ArrayList<>();
+        actors = new Actors().new Builder()
+                .setFirstName("FirstName")
+                .setLastName("LastName")
+                .setBirthday(LocalDate.parse("2019-11-21"))
+                .setSalary(4500.0)
+                .build();
+        arrayActors.add(actors);
+        System.out.println( jsonSerializer.serializeToString(actors));
+
+    }
 }

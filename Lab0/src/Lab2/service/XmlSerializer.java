@@ -2,16 +2,12 @@ package Lab2.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import Lab2.model.Act;
-import Lab2.model.ActorsRole;
-import Lab2.model.Schedule;
 import Lab2.model.Actors;
 import Lab2.exception.ConvertException;
 
 import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.List;
 
 public class XmlSerializer<T> implements IO<T> {
 
@@ -76,4 +72,20 @@ public class XmlSerializer<T> implements IO<T> {
         XmlMapper mapper= new XmlMapper();
         return mapper.readValue(string, classObject);
     }
+
+//    public static <XmlProcessingException> void main(String[] args) throws JsonProcessingException {
+//        XmlSerializer<Actors> xmlSerializer= new XmlSerializer<>(Actors.class);
+//        Actors actors;
+//
+//        ArrayList<Actors> arrayActors = new ArrayList<>();
+//        actors = new Actors().new Builder()
+//                .setFirstName("FirstName")
+//                .setLastName("LastName")
+//                .setBirthday(LocalDate.parse("2019-11-21"))
+//                .setSalary(4500.0)
+//                .build();
+//        arrayActors.add(actors);
+//        System.out.println( xmlSerializer.serializeToString(actors));
+//
+//    }
 }

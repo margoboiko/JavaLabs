@@ -2,26 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74b9022c-98c5-44ae-afaf-9b1d70f34f12" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jackson_annotations_2_9_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jackson_core_2_9_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jackson_dataformat_xml_2_9_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lab2/exception/ConvertException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lab2/model/Act.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lab2/model/Actors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lab2/model/ActorsRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lab2/model/Schedule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lab2/service/IO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lab2/service/JsonSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lab2/service/LocalDateDeserializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lab2/service/LocalDateSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lab2/service/TextSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lab2/service/XmlSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jackson_core_2_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lab2/testing/TestJsonSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lab2/testing/TestTextSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lab2/testing/TestXmlSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lab3/model/Act.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lab3/model/Actors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lab3/model/ActorsRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lab3/model/Schedule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lab3/service/ActorsRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jackson_core_2_9_9.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Labs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Labs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab1/Act.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab1/Act.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab1/Actors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab1/Actors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab1/ActorsRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab1/ActorsRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab1/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab1/Schedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab2/model/Act.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab2/model/Act.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab2/model/Actors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab2/model/Actors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab2/model/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab2/model/Schedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab2/service/IO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab2/service/IO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab2/service/JsonSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab2/service/JsonSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab2/service/TextSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab2/service/TextSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab2/service/XmlSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab2/service/XmlSerializer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,8 +32,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TestNG Test Class" />
-        <option value="Class" />
         <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -48,7 +47,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jackson-databind-2.10.0.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jackson-core-2.10.0.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -58,11 +57,12 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="Lab2.model" />
-    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Lab3.model" />
+      <recent name="Lab2.model" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Lab2.service" />
@@ -81,17 +81,30 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.Test">
-    <configuration name="Test" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.TestTextSerializer">
+    <configuration name="XmlSerializer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lab2.service.XmlSerializer" />
       <module name="Labs" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lab1.testing.*" />
+          <option name="PATTERN" value="Lab2.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="lab1.testing" />
-      <option name="MAIN_CLASS_NAME" value="lab1.testing.Test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestJsonSerializer" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Labs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lab2.testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Lab2.testing" />
+      <option name="MAIN_CLASS_NAME" value="Lab2.testing.TestJsonSerializer" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -99,10 +112,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Variant2Test" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestTextSerializer" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Labs" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="lab0.Variant2Test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lab2.testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Lab2.testing" />
+      <option name="MAIN_CLASS_NAME" value="Lab2.testing.TestTextSerializer" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -110,35 +129,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Variant2Test.arrayTask" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestXmlSerializer" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Labs" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="lab0.Variant2Test" />
-      <option name="METHOD_NAME" value="arrayTask" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lab2.testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Lab2.testing" />
+      <option name="MAIN_CLASS_NAME" value="Lab2.testing.TestXmlSerializer" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Variant2Test.forTask" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestXmlSerializer.serializeToStringTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Labs" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="lab0.Variant2Test" />
-      <option name="METHOD_NAME" value="forTask" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Variant2Test.twoDimensionArrayTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Labs" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="lab0.Variant2Test" />
-      <option name="METHOD_NAME" value="twoDimensionArrayTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lab2.testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Lab2.testing" />
+      <option name="MAIN_CLASS_NAME" value="Lab2.testing.TestXmlSerializer" />
+      <option name="METHOD_NAME" value="serializeToStringTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -148,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Test" />
-        <item itemvalue="TestNG.Variant2Test" />
-        <item itemvalue="TestNG.Variant2Test.twoDimensionArrayTest" />
-        <item itemvalue="TestNG.Variant2Test.arrayTask" />
-        <item itemvalue="TestNG.Variant2Test.forTask" />
+        <item itemvalue="TestNG.TestTextSerializer" />
+        <item itemvalue="TestNG.TestJsonSerializer" />
+        <item itemvalue="TestNG.TestXmlSerializer" />
+        <item itemvalue="TestNG.TestXmlSerializer.serializeToStringTest" />
+        <item itemvalue="Application.XmlSerializer" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573641667836</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Completed">
+      <created>1573806878188</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1573806878188</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
