@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74b9022c-98c5-44ae-afaf-9b1d70f34f12" name="Default Changelist" comment="Completed" />
+    <list default="true" id="74b9022c-98c5-44ae-afaf-9b1d70f34f12" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Lab3/testing/TestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab3/model/Act.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3/model/Act.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab3/model/Actors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3/model/Actors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab3/model/ActorsRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3/model/ActorsRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab3/service/ActorsRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3/service/ActService.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,20 +68,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.TestTextSerializer">
-    <configuration name="XmlSerializer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lab2.service.XmlSerializer" />
-      <module name="Labs" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Lab2.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.TestService.SortActByRole">
     <configuration name="TestJsonSerializer" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Labs" />
       <extension name="coverage">
@@ -86,6 +80,24 @@
       <option name="PACKAGE_NAME" value="Lab2.testing" />
       <option name="MAIN_CLASS_NAME" value="Lab2.testing.TestJsonSerializer" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestService.SortActByRole" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Labs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lab3.testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Lab3.testing" />
+      <option name="MAIN_CLASS_NAME" value="Lab3.testing.TestService" />
+      <option name="METHOD_NAME" value="SortActByRole" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -146,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.TestService.SortActByRole" />
         <item itemvalue="TestNG.TestTextSerializer" />
         <item itemvalue="TestNG.TestJsonSerializer" />
         <item itemvalue="TestNG.TestXmlSerializer" />
         <item itemvalue="TestNG.TestXmlSerializer.serializeToStringTest" />
-        <item itemvalue="Application.XmlSerializer" />
       </list>
     </recent_temporary>
   </component>
@@ -207,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574413811539</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Completed">
+      <created>1574414032370</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1574414032370</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -227,5 +246,24 @@
     <MESSAGE value="starter writing first lab" />
     <MESSAGE value="Completed" />
     <option name="LAST_COMMIT_MESSAGE" value="Completed" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Lab3/service/ActService.java</url>
+          <line>32</line>
+          <properties class="Lab3.service.ActService" method="sortActByRole">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Lab3/testing/TestService.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

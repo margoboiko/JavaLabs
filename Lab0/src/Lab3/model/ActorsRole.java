@@ -6,20 +6,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class ActorsRole {
-   private List<Actors> actor;
+public class ActorsRole implements Comparable<ActorsRole> {
+   private Actors actor;
    private String role;
 
-    public ActorsRole(List<Actors> actor, String role) {
-        this.actor = actor;
-        this.role = role;
-    }
-
-    public List<Actors> getActor() {
+    public Actors getActor() {
         return actor;
     }
-
-    public void setActor(List<Actors> actor) {
+    public void setActor(Actors actor) {
+        if (actor == null)
+            throw new RuntimeException("Please add actors!");
         this.actor = actor;
     }
 
@@ -54,21 +50,26 @@ public class ActorsRole {
         return Objects.hash(actor, role);
     }
 
+    @Override
+    public int compareTo(ActorsRole actorsRole) {
+        return 0;
+    }
+
     /**
+     *
      * inner class builder which implements
      * pattern "Builder"
      */
     public class Builder {
 
         public Builder() {
-            // private constructor
         }
 
-        public ActorsRole.Builder setActor(Actors actor) {
+        public ActorsRole.Builder addActor(Actors actor) {
             if (actor == null)
                 ActorsRole.this.actor = null;
             else
-            ActorsRole.this.actor.add(actor);
+            ActorsRole.this.actor = actor;
             return this;
         }
 

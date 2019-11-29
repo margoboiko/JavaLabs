@@ -96,7 +96,7 @@ public class Actors implements Serializable {
             return this;
         }
 
-        public Actors.Builder setLastName(String lasttName) {
+        public Actors.Builder setLastName(String lastName) {
             Actors.this.lastName = lastName;
             return this;
         }
