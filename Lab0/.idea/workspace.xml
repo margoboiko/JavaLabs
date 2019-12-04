@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74b9022c-98c5-44ae-afaf-9b1d70f34f12" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Lab3/testing/TestService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lab3/model/Act.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3/model/Act.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lab3/model/Actors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3/model/Actors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lab3/model/ActorsRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3/model/ActorsRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lab3/service/ActorsRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3/service/ActService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab3/testing/TestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3/testing/TestService.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,18 +65,54 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.TestService.SortActByRole">
-    <configuration name="TestJsonSerializer" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.TestService">
+    <configuration name="TestService" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Labs" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Lab2.testing.*" />
+          <option name="PATTERN" value="Lab3.testing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Lab2.testing" />
-      <option name="MAIN_CLASS_NAME" value="Lab2.testing.TestJsonSerializer" />
+      <option name="PACKAGE_NAME" value="Lab3.testing" />
+      <option name="MAIN_CLASS_NAME" value="Lab3.testing.TestService" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestService.GetAvgSalaryTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Labs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lab3.testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Lab3.testing" />
+      <option name="MAIN_CLASS_NAME" value="Lab3.testing.TestService" />
+      <option name="METHOD_NAME" value="GetAvgSalaryTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestService.GetListActorsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Labs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lab3.testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Lab3.testing" />
+      <option name="MAIN_CLASS_NAME" value="Lab3.testing.TestService" />
+      <option name="METHOD_NAME" value="GetListActorsTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -121,48 +154,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestXmlSerializer" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Labs" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Lab2.testing.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Lab2.testing" />
-      <option name="MAIN_CLASS_NAME" value="Lab2.testing.TestXmlSerializer" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestXmlSerializer.serializeToStringTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Labs" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Lab2.testing.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Lab2.testing" />
-      <option name="MAIN_CLASS_NAME" value="Lab2.testing.TestXmlSerializer" />
-      <option name="METHOD_NAME" value="serializeToStringTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.TestService" />
+        <item itemvalue="TestNG.TestService.GetListActorsTest" />
+        <item itemvalue="TestNG.TestService.GetAvgSalaryTest" />
         <item itemvalue="TestNG.TestService.SortActByRole" />
         <item itemvalue="TestNG.TestTextSerializer" />
-        <item itemvalue="TestNG.TestJsonSerializer" />
-        <item itemvalue="TestNG.TestXmlSerializer" />
-        <item itemvalue="TestNG.TestXmlSerializer.serializeToStringTest" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574414032370</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Completed">
+      <created>1575018706017</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1575018706017</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -246,24 +251,5 @@
     <MESSAGE value="starter writing first lab" />
     <MESSAGE value="Completed" />
     <option name="LAST_COMMIT_MESSAGE" value="Completed" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Lab3/service/ActService.java</url>
-          <line>32</line>
-          <properties class="Lab3.service.ActService" method="sortActByRole">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Lab3/testing/TestService.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

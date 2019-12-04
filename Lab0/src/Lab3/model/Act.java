@@ -10,7 +10,7 @@ public class Act {
     public static final Integer MAX_NAME_LENGTH = 30;
     private String name;
     private String genre;
-    private List<ActorsRole> roles = null;
+    private List<ActorsRole> roles = new ArrayList<>();
 
     public Act(String name, String genre, List<ActorsRole> roles) {
         this.name = name;
@@ -121,10 +121,7 @@ public class Act {
 
 
         public Builder addRole(ActorsRole roles) {
-            if (roles == null)
-                Act.this.roles = new ArrayList<>();
-            else
-                Act.this.roles.add(roles);
+            act.getActorsRole().add(roles);
             return this;
         }
     }

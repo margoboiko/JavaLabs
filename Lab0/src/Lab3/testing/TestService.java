@@ -20,23 +20,24 @@ public class TestService {
         private List<ActorsRole> roleList;
         ActorsRole role1, role2, role3, role4;
         ActService service;
+        Actors actor1, actor2, actor3;
         @BeforeTest
         public void createActors() {
-            Actors actor1 = new Actors().new Builder()
+            actor1 = new Actors().new Builder()
                     .setFirstName("Симоненко")
                     .setLastName("Катерина")
                     .setBirthday(LocalDate.parse("1985-10-25"))
                     .setSalary(4500.0)
                     .build();
 
-            Actors actor2 = new Actors().new Builder()
+            actor2 = new Actors().new Builder()
                     .setFirstName("Кириленко")
                     .setLastName("Віктор")
                     .setBirthday(LocalDate.parse("1963-05-23"))
                     .setSalary(6000.0)
                     .build();
 
-            Actors actor3 = new Actors().new Builder()
+            actor3 = new Actors().new Builder()
                     .setFirstName("Мойсеєнко")
                     .setLastName("Єлизавета")
                     .setBirthday(LocalDate.parse("2000-08-23"))
@@ -75,15 +76,31 @@ public class TestService {
         }
 
         @Test
-          public void SortActByRole(){
-            List<ActorsRole> roles = new LinkedList<ActorsRole>();
+        public void SortActByRole(){
+            List<ActorsRole> roles = new ArrayList<>();
             roles.add(role1);
             roles.add(role2);
             roles.add(role3);
             roles.add(role4);
-            roles.sort(Comparator.comparing(ActorsRole::getRole).reversed());
+            roles.sort(Comparator.comparing(ActorsRole::getRole));
             Assert.assertEquals(service.sortActByRole(), roles);
 
-          }
+        }
+
+        @Test
+        public void GetAvgSalaryTest() {
+            Double sum = role1.getActor().getSalary() + role2.getActor().getSalary()
+                    + role3.getActor().getSalary() + role4.getActor().getSalary();
+            Assert.assertEquals(service.getAvgSalary(), sum/4);
+        }
+
+        @Test
+        public void GetListActorsTest() {
+            List<Actors> actors = new ArrayList<>();
+            actors.add(actor1);
+            actors.add(actor3);
+
+            Assert.assertEquals(service.getListActors("Дерево"), actors);
+        }
 
 }
