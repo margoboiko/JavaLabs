@@ -1,36 +1,39 @@
 package Lab5_6.model;
 
+import Lab4.model.Actors;
 
-
+import javax.validation.ConstraintViolation;
+import javax.validation.Validation;
+import javax.validation.Validator;
 import javax.validation.constraints.NotNull;
-import java.sql.Connection;
+import javax.validation.constraints.Size;
 import java.util.Objects;
+import java.util.Set;
 
 public class ActorsRole implements Comparable<ActorsRole> {
-    @NotNull(message = " field can`t be null")
-    private Integer id;
-   private Actors actor;
-   private String role;
 
-    public ActorsRole(Connection connection) {
-    }
+    @NotNull
+    private Actors actor;
+    @Size(min = 2, max = 20, message = "Incorrect role")
+    private String role;
 
     public Actors getActor() {
         return actor;
     }
-    //public void setActor(Actors actor) { this.actor = actor; }
+    public void setActor(Actors actor) {
+        if (actor == null)
+            throw new RuntimeException("Please add actors!");
+        this.actor = actor;
+    }
 
     public String getRole() {
         return role;
     }
-   // public void setRole(int role) { this.role = role; }
-
-    public Integer getId() {
-        return id;
+    public void setRole(String role) {
+        if (role.length() > 20)
+            throw new RuntimeException("Please rewrite!");
+        this.role = role;
     }
-//    public void setId(Integer id) {
-//        this.id = id;
-//    }
 
     @Override
     public String toString() {
@@ -59,9 +62,6 @@ public class ActorsRole implements Comparable<ActorsRole> {
         return 0;
     }
 
-//    public ActorsRole resultSetToObj(ResultSet resultSet) {
-//    }
-
     /**
      *
      * inner class builder which implements
@@ -72,11 +72,6 @@ public class ActorsRole implements Comparable<ActorsRole> {
         public Builder() {
         }
 
-        public Builder setId(Integer id) {
-            ActorsRole.this.id = id;
-            return this;
-        }
-        
         public ActorsRole.Builder addActor(Actors actor) {
             ActorsRole.this.actor = actor;
             return this;
@@ -96,8 +91,21 @@ public class ActorsRole implements Comparable<ActorsRole> {
          * Call it after setting all parameters
          * @return instance of class Actors
          */
-        public ActorsRole build()
-        {
+        public ActorsRole build() {
+            Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
+            Set<ConstraintViolation<ActorsRole>> constraintViolations = validator.validate(ActorsRole.this);
+
+            if(!constraintViolations.isEmpty()) {
+                StringBuilder str = new StringBuilder();
+                constraintViolations .forEach(constraint -> {
+                    str.append(constraint.getPropertyPath())
+                            .append(" : ")
+                            .append(constraint.getMessage())
+                            .append("\n");
+                });
+                throw new RuntimeException(str.toString());
+            }
+
             return ActorsRole.this;
         }
 

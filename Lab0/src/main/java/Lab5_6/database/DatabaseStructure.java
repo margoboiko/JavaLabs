@@ -20,7 +20,7 @@ public class DatabaseStructure extends ConnectManager {
     private static final String DROP_SCHEDULE = "DROP TABLE schedule";
 
 
-    public static void createTables() throws DatabaseConnectException, SQLException {
+    public static void createTables() throws SQLException {
         ConnectManager connectManager = new ConnectManager();
         try (Connection connection = connectManager.createConnection()) {
             Statement statement = connection.createStatement();
@@ -28,7 +28,6 @@ public class DatabaseStructure extends ConnectManager {
             statement.execute(CREATE_ACTORS);
             statement.execute(CREATE_ACTORS_ROLE);
             statement.execute(CREATE_SCHEDULE);
-
         }
         catch (SQLException ex) {
             throw new SQLException(ex.getMessage());
@@ -44,7 +43,7 @@ public class DatabaseStructure extends ConnectManager {
             statement.execute(DROP_ACTORS);
             statement.execute(DROP_ACT);
         }
-        catch (SQLException | DatabaseConnectException ex) {
+        catch (SQLException ex) {
             throw new SQLException(ex.getMessage());
         }
     }

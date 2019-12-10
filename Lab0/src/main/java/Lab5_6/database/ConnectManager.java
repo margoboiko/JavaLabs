@@ -1,5 +1,6 @@
 package Lab5_6.database;
 
+
 import Lab5_6.exceptions.DatabaseConnectException;
 
 import java.io.FileInputStream;
@@ -18,22 +19,22 @@ private Properties properties;
 
 public ConnectManager() { }
 
-public Connection createConnection() throws DatabaseConnectException {
+public Connection createConnection() {
         try {
-        properties.load(new FileInputStream("C:\\Users\\Rita\\Desktop\\Projects\\Java\\JavaLabs\\Lab0\\out\\resources\\database.properties"));
+        properties.load(new FileInputStream("C:\\Users\\Rita\\Downloads\\JavaLabs\\Lab0\\out\\resources\\database.properties"));
 
-        Class.forName(properties.getProperty("jdbc.drivers"));
+//        Class.forName(properties.getProperty("org.postgresql.Driver"));
+                properties.getProperty("org.postgresql.Driver");
         Connection connection= DriverManager.getConnection(
-        properties.getProperty("jdbc.url"),
-        properties.getProperty("login"),
-        properties.getProperty("password")
+                properties.getProperty("jdbc.url"),
+                properties.getProperty("login"),
+                properties.getProperty("password")
         );
         return connection;
         }
-        catch (SQLException | IOException | ClassNotFoundException ex) {
-        throw new DatabaseConnectException(ex.getMessage());
+        catch (SQLException | IOException ex) {
+         throw new DatabaseConnectException(ex.getMessage());
         }
-
         }
 
         public static Connection getConnection()throws SQLException {

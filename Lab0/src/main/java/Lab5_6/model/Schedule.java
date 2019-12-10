@@ -1,27 +1,33 @@
 package Lab5_6.model;
 
-import Lab2.model.Act;
 import Lab2.service.LocalDateDeserializer;
 import Lab2.service.LocalDateSerializer;
+import Lab4.model.Act;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
-import javax.validation.constraints.NotNull;
+import javax.validation.ConstraintViolation;
+import javax.validation.Validation;
+import javax.validation.Validator;
+import javax.validation.constraints.Future;
+import javax.validation.constraints.Max;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Objects;
+import java.util.Set;
 
 public class Schedule implements Comparable<Schedule> {
-  //  public static final Double MAXPRICE = 200.00;
-  @NotNull(message = " field can`t be null")
-    private Integer id;
+    public static final Double MAXPRICE = 200.00;
    private Act act;
-    @JsonFormat(pattern = "yyyyMMdd")
+
+   @JsonFormat(pattern = "yyyyMMdd")
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @JsonSerialize(using = LocalDateSerializer.class)
+   @Future
    private LocalDate date;
    private LocalTime time;
+   @Max(200)
    private Double price;
 
    public Schedule() {
@@ -57,11 +63,11 @@ public class Schedule implements Comparable<Schedule> {
     }
 
     public Double getPrice() { return price; }
-    public void setPrice(Double price) { this.price = price; }
-
-    @NotNull
-    public Integer getId() { return id; }
-    public void setId(Integer id) { this.id = id; }
+    public void setPrice(Double price) {
+        if (price > MAXPRICE)
+            throw new RuntimeException("Please rewrite!");
+        this.price = price;
+    }
 
     @Override
     public String toString() {
@@ -104,10 +110,6 @@ public class Schedule implements Comparable<Schedule> {
             // private constructor
         }
 
-        public Builder setId(Integer act) {
-            Schedule.this.id = id;
-            return this;
-        }
         public Builder setAct(Act act) {
             Schedule.this.act = act;
             return this;
@@ -129,7 +131,6 @@ public class Schedule implements Comparable<Schedule> {
          * @return instance of this builder
          */
         public Builder setPrice(Double price) {
-            Schedule.this.price = price;
             return this;
         }
 
@@ -138,6 +139,19 @@ public class Schedule implements Comparable<Schedule> {
          * @return instance of class Schedule
          */
         public Schedule build() {
+            Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
+            Set<ConstraintViolation<Schedule>> constraintViolations = validator.validate(Schedule.this);
+
+            if(!constraintViolations.isEmpty()) {
+                StringBuilder str = new StringBuilder();
+                constraintViolations .forEach(constraint -> {
+                    str.append(constraint.getPropertyPath())
+                            .append(" : ")
+                            .append(constraint.getMessage())
+                            .append("\n");
+                });
+                throw new RuntimeException(str.toString());
+            }
             return Schedule.this;
         }
 

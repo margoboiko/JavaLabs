@@ -2,37 +2,40 @@ package Lab5_6.model;
 
 import Lab2.service.LocalDateDeserializer;
 import Lab2.service.LocalDateSerializer;
+import Lab4.validators.MaxYear;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
+import javax.validation.ConstraintViolation;
+import javax.validation.Validation;
+import javax.validation.Validator;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
+import java.util.Set;
 
 public class Actors implements Serializable {
-    //private LocalDate MAXYEAR =  LocalDate.of(1960, 1, 1);
-    //public static final Double MINSALARY = 3000d;
-    @NotNull(message = " field can`t be null")
-    private Integer id;
 
-    //@Size(min = 1, max=20)
+    @NotNull
+    @Size(min = 2, max = 20, message = "Incorrect name")
     private String firstName;
 
-   // @Size(min = 1, max=20)
+    @NotNull
+    @Size(min = 2, max = 30, message = "Incorrect surname")
     private String lastName;
 
     @JsonFormat(pattern = "yyyyMMdd")
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @JsonSerialize(using = LocalDateSerializer.class)
+    @MaxYear(1960)
     private LocalDate birthday;
 
-    //@MinSalary(value = 3000d)
+    @Min(3000)
     private Double salary;
-
-    public Integer getId() { return id; }
-    public void setId(Integer id) { this.id = id; }
 
     public String getFirstName() {
         return firstName;
@@ -51,12 +54,16 @@ public class Actors implements Serializable {
     public LocalDate getBirthday() {
         return birthday;
     }
-    public void setBirthday(LocalDate birthday) { this.birthday = birthday; }
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
+    }
 
     public Double getSalary() {
         return salary;
     }
-    public void setSalary(Double salary) { this.salary = salary; }
+    public void setSalary(Double salary) {
+        this.salary = salary;
+    }
 
 
 
@@ -93,11 +100,7 @@ public class Actors implements Serializable {
     public class Builder {
 
         public Builder() {
-        }
-
-        public Actors.Builder setId(Integer id) {
-            Actors.this.id=id;
-            return this;
+            // private constructor
         }
 
         public Actors.Builder setFirstName(String firstName) {
@@ -134,7 +137,20 @@ public class Actors implements Serializable {
          * Call it after setting all parameters
          * @return instance of class Actors
          */
-        public Actors build()  {
+        public Actors build() {
+            Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
+            Set<ConstraintViolation<Actors>> constraintViolations = validator.validate(Actors.this);
+
+            if(!constraintViolations.isEmpty()) {
+                StringBuilder str = new StringBuilder();
+                constraintViolations .forEach(constraint -> {
+                    str.append(constraint.getPropertyPath())
+                            .append(" : ")
+                            .append(constraint.getMessage())
+                            .append("\n");
+                });
+                throw new RuntimeException(str.toString());
+            }
             return Actors.this;
         }
 

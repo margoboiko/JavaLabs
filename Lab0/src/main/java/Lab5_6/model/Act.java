@@ -1,19 +1,28 @@
 package Lab5_6.model;
 
+import Lab4.model.ActorsRole;
 
+import javax.validation.ConstraintViolation;
+import javax.validation.Validation;
+import javax.validation.Validator;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 
 public class Act {
 
-    //public static final Integer MAX_NAME_LENGTH = 30;
-    @NotNull(message = " field can`t be null")
-    private Integer id;
+    public static final Integer MAX_NAME_LENGTH = 30;
+    @NotNull
+    @Size(min =2, max = 30, message="Incorrect name")
     private String name;
+    @NotNull
+    @Size(min =2, max = 20, message="Incorrect genre")
     private String genre;
+    @Size(min =1, max = 20, message="Incorrect roles count")
     private List<ActorsRole> roles = new ArrayList<>();
 
     public Act(String name, String genre, List<ActorsRole> roles) {
@@ -27,13 +36,6 @@ public class Act {
 
     }
 
-    public Integer getId() {
-        return id;
-    }
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
     }
@@ -42,6 +44,8 @@ public class Act {
      * @param name Act name
      */
     public void setName(String name) {
+        if (name.length() > MAX_NAME_LENGTH)
+            throw new RuntimeException("Please rewrite!");
         this.name = name;
     }
 
@@ -93,7 +97,7 @@ public class Act {
      * inner class builder which implements
      * pattern "Builder"
      */
-    public class Builder {
+    public static class Builder {
 
         Act act;
 
@@ -101,16 +105,15 @@ public class Act {
             act = new Act();
         }
 
-        public Builder setId(Integer id) {
-            Act.this.id = id;
-            return this;
-        }
-
         /**
          * @param name String must be less than MAXNAMELENGHT
          * @return instance of this builder
          */
         public Builder setName(String name) {
+            act.setName(name);
+            if (name.length() > MAX_NAME_LENGTH)
+                throw new RuntimeException("Please rewrite!");
+            else
                 act.name = name;
             return this;
         }
@@ -126,6 +129,19 @@ public class Act {
          * @return instance of class Actors
          */
         public Act build() {
+            Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
+            Set<ConstraintViolation<Act>> constraintViolations = validator.validate(act);
+
+            if(!constraintViolations.isEmpty()) {
+                StringBuilder str = new StringBuilder();
+                constraintViolations .forEach(constraint -> {
+                    str.append(constraint.getPropertyPath())
+                            .append(" : ")
+                            .append(constraint.getMessage())
+                            .append("\n");
+                });
+                throw new RuntimeException(str.toString());
+            }
             return act;
         }
 
