@@ -2,9 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74b9022c-98c5-44ae-afaf-9b1d70f34f12" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lab3/model/Act.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3/model/Act.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lab3/testing/TestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3/testing/TestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Labs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Labs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab2/exception/ConvertException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab2/model/Act.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab2/model/Actors.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab2/model/ActorsRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab2/model/Schedule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab2/service/IO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab2/service/JsonSerializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab2/service/LocalDateDeserializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab2/service/LocalDateSerializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab2/service/TextSerializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab2/service/XmlSerializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab2/testing/TestJsonSerializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab2/testing/TestTextSerializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab2/testing/TestXmlSerializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab3/model/Act.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab3/model/Actors.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab3/model/ActorsRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab3/model/Schedule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab3/service/ActService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab3/testing/TestService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab0/Variant2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab0/Variant2Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab1/Act.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab1/Actors.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab1/ActorsRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab1/Schedule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab1/testing/Test.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,15 +52,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1RPWzzl2cMBzCEaqjilo0TjBLEe" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jackson-core-2.10.0.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -41,12 +80,14 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Lab4.model" />
+      <recent name="Lab4.testing" />
       <recent name="Lab3.model" />
       <recent name="Lab2.model" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Lab2.service" />
@@ -65,7 +106,24 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.TestService">
+  <component name="RunManager" selected="TestNG.Test">
+    <configuration name="Test" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Labs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lab4.testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Lab4.testing" />
+      <option name="MAIN_CLASS_NAME" value="Lab4.testing.Test" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestService" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Labs" />
       <extension name="coverage">
@@ -83,17 +141,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestService.GetAvgSalaryTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Test.builderTest3" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Labs" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Lab3.testing.*" />
+          <option name="PATTERN" value="Lab4.testing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Lab3.testing" />
-      <option name="MAIN_CLASS_NAME" value="Lab3.testing.TestService" />
-      <option name="METHOD_NAME" value="GetAvgSalaryTest" />
+      <option name="PACKAGE_NAME" value="Lab4.testing" />
+      <option name="MAIN_CLASS_NAME" value="Lab4.testing.Test" />
+      <option name="METHOD_NAME" value="builderTest3" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -101,17 +159,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestService.GetListActorsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Test.builderTest8" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Labs" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Lab3.testing.*" />
+          <option name="PATTERN" value="Lab4.testing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Lab3.testing" />
-      <option name="MAIN_CLASS_NAME" value="Lab3.testing.TestService" />
-      <option name="METHOD_NAME" value="GetListActorsTest" />
+      <option name="PACKAGE_NAME" value="Lab4.testing" />
+      <option name="MAIN_CLASS_NAME" value="Lab4.testing.Test" />
+      <option name="METHOD_NAME" value="builderTest8" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -119,35 +177,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestService.SortActByRole" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Test.builderTest9" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Labs" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Lab3.testing.*" />
+          <option name="PATTERN" value="Lab4.testing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Lab3.testing" />
-      <option name="MAIN_CLASS_NAME" value="Lab3.testing.TestService" />
-      <option name="METHOD_NAME" value="SortActByRole" />
+      <option name="PACKAGE_NAME" value="Lab4.testing" />
+      <option name="MAIN_CLASS_NAME" value="Lab4.testing.Test" />
+      <option name="METHOD_NAME" value="builderTest9" />
       <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestTextSerializer" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Labs" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Lab2.testing.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Lab2.testing" />
-      <option name="MAIN_CLASS_NAME" value="Lab2.testing.TestTextSerializer" />
-      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -156,11 +197,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Test" />
+        <item itemvalue="TestNG.Test.builderTest8" />
+        <item itemvalue="TestNG.Test.builderTest9" />
+        <item itemvalue="TestNG.Test.builderTest3" />
         <item itemvalue="TestNG.TestService" />
-        <item itemvalue="TestNG.TestService.GetListActorsTest" />
-        <item itemvalue="TestNG.TestService.GetAvgSalaryTest" />
-        <item itemvalue="TestNG.TestService.SortActByRole" />
-        <item itemvalue="TestNG.TestTextSerializer" />
       </list>
     </recent_temporary>
   </component>
@@ -174,6 +215,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1569569477892</updated>
+      <workItem from="1575740322830" duration="3013000" />
+      <workItem from="1575743658785" duration="1876000" />
+      <workItem from="1575745610488" duration="271000" />
     </task>
     <task id="LOCAL-00001" summary="starter writing first lab">
       <created>1570774832915</created>
@@ -233,6 +277,9 @@
     </task>
     <option name="localTasksCounter" value="9" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
